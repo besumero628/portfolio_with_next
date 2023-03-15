@@ -1,173 +1,175 @@
-import { Box, Icon, Flex, Heading, Text, Table, TableContainer, Tbody, Tr, Td, Image, FormControl, FormLabel, Input, Textarea, Card, CardBody, Stack } from "@chakra-ui/react";
+import { IndexLayout } from "@/components/templates/IndexTemplate";
+import { Box, Icon, Flex, Text } from "@chakra-ui/react";
 import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai"
-import { FaStar, FaStarHalf } from "react-icons/fa"
 import { SiQiita } from "react-icons/si"
 
 
 export default function Home() {
   return (
     <>
-      <Flex
-        backgroundImage="url('/top-view.jpg')" 
-        backgroundPosition={"center"} 
-        backgroundSize={"cover"}
-        backgroundColor={"rgba(255, 255, 255, 0.65)"}
-        backgroundBlendMode={"lighten"}
-        height={{base: "100vh", xl: "30vw"}} 
-        alignItems={"center"}  
-        justifyContent={"center"}
-      >
-        <Box>
-          <Heading width={"100%"} as={"h1"} fontSize={"34px"} fontWeight={"normal"}>SHUHEI NARA</Heading>
-          <Flex justifyContent={"center"}>
-            <Text color={"#aaaaaa"}>web aplication engineer</Text>
-          </Flex>
-        </Box>
-      </Flex>
-
-      {/* topics */}
-      <Flex height={"150px"} backgroundColor={"#f9f9f9"} flexDirection={"column"} justifyContent={"center"} alignItems={"center"} pt={"25px"} pb={"25px"}>
-        <TableContainer width={{base: "100%", xl: 1096}}>
-          <Table size={"sm"}>
-            <Tbody>
-                <Tr>
-                  <Td width={"10%"}>2022/01/01</Td>
-                  <Td>サイトを公開しました</Td>
-                </Tr>
-                <Tr>
-                  <Td width={"10%"}>2022/01/01</Td>
-                  <Td>サイトを公開しました</Td>
-                </Tr>
-                <Tr>
-                  <Td width={"10%"}>2022/01/01</Td>
-                  <Td>サイトを公開しました</Td>
-                </Tr>
-            </Tbody>
-          </Table>
-        </TableContainer>
-      </Flex>
-
-      {/* about */}
-      <Flex height={"80vh"} flexDirection={"column"} justifyContent={"space-around"} alignItems={"center"} pt={"25px"} pb={"25px"}>
-        <Box width={{base: "100%", xl: 1096}}>
-          <Text fontSize={"14px"}>
-            「あなたの仕事をより便利に快適に」それが私のエンジニアを志した原点です。<br/>
-          大企業での実務経験や本業のシステム構築の経験を活かし、クライアント様の日々の業務をより便利にできたら本望です。
-          目先の便利さだけでなく、設計・制作後の運用まで考慮してより使いやすい成果物をご提供できるよう努力いたします。
-          </Text>
-        </Box>
-        <Box width={{base: "100%", xl: 1096}}>
-            <Card maxW={'sm'}>
-              <a href="https://www.google.com/" target={"_blank"} rel={"noopener noreferrer"}>
-                <CardBody>
-                  <Image src="ruby-gold.png" alt="Ruby Certified Ruby Examination Gold icon"></Image>
-                  <Stack mt='6' spacing='3'>
-                    <Heading size='md'>Portfolio</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque inspired
-                      spaces, earthy toned spaces and for people who love a chic design with a
-                      sprinkle of vintage design.
-                    </Text>
-                  </Stack>
-                </CardBody>
-              </a>
-            </Card>
-          
-        </Box>
-      </Flex>
-
-      {/* skills */}
-      <Flex height={"500px"} backgroundColor={"#f9f9f9"} flexDirection={"column"} justifyContent={"center"} alignItems={"center"} pt={"25px"} pb={"25px"}>
-        <Flex height={"400px"} width={{base: "100%", xl: 1096}} justifyContent={"space-between"}>
-          <Box>
-            FrontEnd
-            <Flex>
-              <Box>
-                Javascript
-              </Box>
-              <Box>
-                <Icon as={FaStar} color={"#fc7c2c"} />
-                <Icon as={FaStarHalf} color={"#fc7c2c"} />
-              </Box>
-            </Flex>
-          </Box>
-          <Box>
-            BackEnd
-            <Flex>
-              <Box>
-                Rails
-              </Box>
-              <Box>
-                <Icon as={FaStar} color={"#fc7c2c"} />
-                <Icon as={FaStarHalf} color={"#fc7c2c"} />
-              </Box>
-            </Flex>
-          </Box>
-          <Box>
-            Other
-            <Flex>
-              <Box>
-                Docker
-              </Box>
-              <Box>
-                <Icon as={FaStar} />
-                <Icon as={FaStarHalf} />
-              </Box>
-            </Flex>
-          </Box>
-        </Flex>
-        <Box height={"75px"}>
-          <Text fontSize={"14px"}>
-            取得資格
-          </Text>
-          <Flex>
-            <Flex>
-              <Image boxSize={'30px'} src="ruby-silver.png" alt="Ruby Certified Ruby Examination Silver icon"></Image>
-              <Text fontSize={"14px"}>
-              Ruby Certified Ruby Examination Silver 2.1
-              </Text>
-            </Flex>
-            <Flex>
-              <Image boxSize={'30px'} src="ruby-gold.png" alt="Ruby Certified Ruby Examination Gold icon"></Image>
-              <Text fontSize={"14px"}>
-              Ruby Certified Ruby Examination Gold 2.1
-              </Text>
-            </Flex>
-          </Flex>
-        </Box>
-        <Box>
-          <Text fontSize={"14px"}>
-            職務経歴書はこちら
-          </Text>
-        </Box>
-      </Flex>
-
-      {/* contact */}
-      <Flex flexDirection={"column"} alignItems={"center"} pt={"25px"} pb={"25px"}>
-        <FormControl width={{base: "100%", xl: 1096}}>
-          <FormLabel>Name</FormLabel>
-          <Input type={'text'} />
-          <FormLabel>Email</FormLabel>
-          <Input type={'email'} />
-          <FormLabel>Comment</FormLabel>
-          <Textarea />
-        </FormControl>
-      </Flex>
-      
-      {/* fotter */}
-      <Flex backgroundColor={"#f9f9f9"} flexDirection={"column"} alignItems={"center"} pt={"25px"} pb={"25px"}>
-        <Box width={{base: "auto", xl: 1096}}>
-          <Flex>
-            <Box>
-              <Text>SHUHEI NARA (@besumero628)</Text>
-              <Icon as={AiFillGithub} />
-              <Icon as={AiFillTwitterCircle} />
-              <Icon as={AiFillLinkedin} />
-              <Icon as={SiQiita} />
-            </Box>
-          </Flex>
-        </Box>
-      </Flex>
+      <IndexLayout
+        firstView={{
+          backgroundImage: "/top-view.jpg",
+          backgroundColor: "rgba(255, 255, 255, 0.65)",
+          mainText: "SHUHEI NARA",
+          subText: "web aplication engineer"
+        }}
+        topics={{
+          content: [
+            {
+              date: "2023/03/16",
+              text: "ページを公開しました"
+            },
+            {
+              "date": "2022/10/29",
+              "text": "Qiita 記事公開 : AWS CDK初心者が爆速でLambda Layerにpythonライブラリを入れた裏技"
+            },
+            {
+              "date": "2022/08/31",
+              "text": "Qiita 記事公開 : AWS CDK初心者が爆速でS3とかlambdaとか「とりあえずそれっぽく」作る方法"
+            },
+          ],
+        }}
+        about={{
+          context: `
+        「あなたの仕事をより便利に快適に」それが私のエンジニアを志した原点です。
+        `,
+          works: [
+            {
+              body: {
+                image: {
+                  src: "top-view.jpg",
+                  alt: "portfolio"
+                },
+                title: "portfolio",
+                context: "Nextjs × Vercelを使用したポートフォリオ"
+              },
+              links: {
+                url: "",
+                github: "https://github.com/besumero628/portfolio_with_next"
+              }
+            },
+            {
+              body: {
+                image: {
+                  src: "LABONITY.png",
+                  alt: "LABONITY"
+                },
+                title: "LABONITY",
+                context: "Railsを使用した大学・企業向けサイト"
+              },
+              links: {
+                url: "",
+                github: "https://github.com/besumero628/LABONITY"
+              }
+            },
+            {
+              body: {
+                image: {
+                  src: "kintaikun.png",
+                  alt: "勤怠くん"
+                },
+                title: "勤怠くん",
+                context: "Vue × Rustを使用した勤怠管理サイト"
+              },
+              links: {
+                url: "https://github.com/besumero628/vue-rust-kintai-front",
+                github: "https://github.com/"
+              }
+            },
+          ]
+        }}
+        skill={{
+          skillItemsList: {
+            frontEnd: [
+              {
+                name: "HTML/CSS",
+                level: 5
+              },
+              {
+                name: "JavaScript",
+                level: 4
+              },
+              {
+                name: "Chakra UI",
+                level: 4
+              },
+              {
+                name: "React",
+                level: 4
+              },
+              {
+                name: "Vue",
+                level: 3
+              },
+            ],
+            backEnd: [
+              {
+                name: "Web Scraping",
+                level: 5
+              },
+              {
+                name: "Flask",
+                level: 4
+              },
+              {
+                name: "Ruby on Rails",
+                level: 4
+              },
+              {
+                name: "Zappa",
+                level: 4
+              },
+              {
+                name: "Django",
+                level: 2
+              },
+            ],
+            other: [
+              {
+                name: "Kintone",
+                level: 5
+              },
+              {
+                name: "Git",
+                level: 4
+              },
+              {
+                name: "Docker",
+                level: 3
+              },
+              {
+                name: "AWS",
+                level: 3
+              },
+              {
+                name: "SQL",
+                level: 3
+              },
+            ]
+          },
+          certificationList: [
+            {
+              src: "ruby-silver.png",
+              alt: "Ruby Certified Ruby Examination Silver 2.1"
+            },
+            {
+              src: "ruby-gold.png",
+              alt: "Ruby Certified Ruby Examination Gold 2.1"
+            }
+          ],
+          experienceLink: "https://drive.google.com/file/d/1KOap722AQoOOqbXVNGuayWR8rha9qSaO/view?usp=share_link"
+        }}
+        contact={{
+          mail: "besumero628@gmail.com",
+          links: {
+            github: "https://github.com/besumero628",
+            twitter: "https://twitter.com/besumero628",
+            linkedIn: "https://www.linkedin.com/in/%E8%84%A9%E5%B9%B3-%E5%A5%88%E8%89%AF-b750a6263/",
+            qiita: "https://qiita.com/besmero628"
+          }
+        }}
+      />
     </>
   )
 }
