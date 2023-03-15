@@ -32,7 +32,7 @@ export default function Home() {
         }}
         about={{
           context: `
-        「あなたの仕事をより便利に快適に」それが私のエンジニアを志した原点です。
+        
         `,
           works: [
             {
