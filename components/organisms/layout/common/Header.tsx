@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Center, Flex, Link, Icon, List, ListItem, Divider } from "@chakra-ui/react";
+import { Center, Flex, Link, Icon, List, ListItem } from "@chakra-ui/react";
 import { FC, memo } from "react";
 import { BsDiamondFill } from "react-icons/bs";
 
@@ -21,13 +21,13 @@ export const Header: FC = memo(function Header() {
         </Flex>
         <List spacing={3}>
           <ListItem display="inline" m={2} fontSize={16}>
-            <Link as={NextLink} href='/about'>ABOUT</Link>
+            <a href='#about'>ABOUT</a>
           </ListItem>
           <ListItem display="inline" m={2} fontSize={16}>
-            <Link as={NextLink} href='/work'>WORK</Link>
+            <a href='#skills'>SKILLS</a>
           </ListItem>
           <ListItem display="inline" m={2} fontSize={16}>
-            <Link as={NextLink} href='/contact'>CONTACT</Link>
+            <a href='#contact'>CONTACT</a>
           </ListItem>
         </List>
       </Flex>
