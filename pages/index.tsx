@@ -73,8 +73,8 @@ export default function Home() {
                 context: "Vue × Rustを使用した勤怠管理サイト"
               },
               links: {
-                url: "https://github.com/besumero628/vue-rust-kintai-front",
-                github: "https://github.com/"
+                url: "",
+                github: "https://github.com/besumero628/vue-rust-kintai-front"
               }
             },
           ]

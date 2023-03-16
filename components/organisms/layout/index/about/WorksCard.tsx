@@ -13,10 +13,10 @@ export const WorksCard: FC<Props> = memo(function WorksCard(props) {
   return (
     <>
       <Card width={{ base: "sm", xl: "30%" }} m={"10px"}>
-        <a href={work.links.url} target={"_blank"} rel={"noopener noreferrer"}>
+        {/* <a href={work.links.url} target={"_blank"} rel={"noopener noreferrer"}> */}
           <WorkCardBody element={work.body} />
-          <Divider />
-        </a>
+          <Divider borderColor={"#e2e8f0"} />
+        {/* </a> */}
         <WorkCardFooter workCardLink={work.links} />
       </Card>
     </>
