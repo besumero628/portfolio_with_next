@@ -1,4 +1,4 @@
-import { Td, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { FC, memo, ReactNode } from "react";
 
 type Props = {

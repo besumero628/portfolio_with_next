@@ -1,13 +1,17 @@
 import { IndexLayout } from "@/components/templates/IndexTemplate";
-import { Box, Icon, Flex, Text } from "@chakra-ui/react";
-import { AiFillGithub, AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai"
-import { SiQiita } from "react-icons/si"
-
 
 export default function Home() {
   return (
     <>
       <IndexLayout
+        meta = {{
+          title: "NARA SHUHEI -PORTFOLIO-",
+          description: "奈良脩平が運営するポートフォリオサイトです。",
+          url: "https://portfolio-with-next-nu.vercel.app/",
+          type: "website",
+          imageUrl: "https://portfolio-with-next-nu.vercel.app/OGP.png"
+        }}
+
         firstView={{
           backgroundImage: "/top-view.jpg",
           backgroundColor: "rgba(255, 255, 255, 0.65)",
