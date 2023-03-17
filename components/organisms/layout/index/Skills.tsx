@@ -1,10 +1,11 @@
 import NextLink from 'next/link'
 import { Box, Divider, Flex, Link } from "@chakra-ui/react";
-import { FC, memo } from "react";
+import { FC, memo, useState } from "react";
 import { Paragraph } from "../../utils/Paragraph";
 import { Certification } from "./skills/Certification";
 import { SkillList } from "./skills/SkillList";
 import { SkillType } from "./skills/type";
+import * as gtag from '../../../../lib/gtag'
 
 type Props = {
   skill: SkillType
@@ -12,6 +13,21 @@ type Props = {
 
 export const Skills: FC<Props> = memo(function Skills(props) {
   const { skill } = props
+  const [score, setScore] = useState(0)
+
+  // ボタンをクリックしたとき
+  const handler = () => {
+
+    setScore(score + 1)
+
+    // Analyticsに送信する情報
+    gtag.event({
+      action: 'click_answer', 
+      category: 'score',
+      label: "experience",
+      value: score,
+    })
+  }
   return(
     <>
       <Paragraph
@@ -44,7 +60,7 @@ export const Skills: FC<Props> = memo(function Skills(props) {
         <Certification certificationList={skill.certificationList} />
         
         <Box fontSize={"14px"} m={5}>
-          <Link as={NextLink} href={skill.experienceLink} textDecoration={"underline"}>職務経歴書</Link> はこちら
+          <Link onClick={handler} as={NextLink} href={skill.experienceLink} textDecoration={"underline"}>職務経歴書</Link> はこちら
         </Box>
       </Paragraph>
     </>
